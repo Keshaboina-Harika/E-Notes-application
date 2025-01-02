@@ -1,0 +1,7 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Program Files\\Apache Software Foundation\\Tomcat 10.1_Tomcat20\\lib\\mysql-connector-j-8.0.33.jar",
+        "c:\\Program Files\\Apache Software Foundation\\Tomcat 10.1_Tomcat20\\lib\\servlet-api.jar"
+    ]
+}
