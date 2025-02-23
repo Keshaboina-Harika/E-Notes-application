@@ -93,7 +93,7 @@
   		
   		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-		    Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/enotes","root","Raviteja@9553");
+		    Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/enotes","**","****");
   			String sql="insert into notes(title,content,emailid) values(?,?,?)";
   			PreparedStatement ps=con.prepareStatement(sql);
   			ps.setString(1, app.getTitle());
@@ -118,7 +118,7 @@
 		
 	    try {        
 		   Class.forName("com.mysql.cj.jdbc.Driver");
-		   Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/enotes","root","Raviteja@9553");
+		   Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/enotes","***","*****");
 		   String sql="select * from notes where emailid='"+email+"'";
 		   PreparedStatement ps = con.prepareStatement(sql);
 		   ResultSet rs = ps.executeQuery();
@@ -144,7 +144,7 @@
  		boolean f = false;
  		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-		    Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/enotes","root","Raviteja@9553");
+		    Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/enotes","***","*****");
  			String sql = "update notes set title=?, content=? where id=?";
  			PreparedStatement ps = con.prepareStatement(sql);
  			ps.setString(1, n.getTitle());
@@ -164,7 +164,7 @@
  		boolean f = false;
  		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-		    Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/enotes","root","Raviteja@9553");
+		    Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/enotes","***"","*****");
  			String sql = "DELETE FROM notes WHERE id = ?";
  			PreparedStatement ps = con.prepareStatement(sql);
  			ps.setInt(1, n.getId());
@@ -195,7 +195,7 @@
 	
 	try {
 		Class.forName("com.mysql.cj.jdbc.Driver");
-    Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/enotes","root","Raviteja@9553");
+    Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/enotes","***","****");
 		Statement st = con.createStatement();
 		ResultSet rs = st.executeQuery("select * from userdtls where email='" + email + "'");
 		if (rs.next()) {
